@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@cypress/react18": "^2.0.1",
-    "@mate-academy/scripts": "^1.9.12",
+    "@mate-academy/scripts": "^2.1.0",
     "@mate-academy/students-ts-config": "*",
     "@mate-academy/stylelint-config": "*",
     "@types/node": "^20.14.10",
@@ -58,10 +58,9 @@
     "format": "prettier --write './src/**/*.{ts,tsx}'",
     "lint": "npm run style-format && npm run format && npm run lint-js && npm run lint-css",
     "update": "mate-scripts update",
-    "postinstall": "if [ \"$VERCEL\" != \"1\" ]; then npm run update && cypress verify; fi",
+    "postinstall": "npm run update && cypress verify",
     "predeploy": "npm run build",
     "deploy": "mate-scripts deploy"
-
   },
   "browserslist": {
     "production": [
