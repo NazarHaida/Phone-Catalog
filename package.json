@@ -1,6 +1,6 @@
 {
-  "name": "Phone-Catalog",
-  "homepage": "https://NazarHaida.github.io/Phone-Catalog",
+  "name": "phone-catalog",
+  "homepage": "https://NazarHaida.github.io/phone-catalog",
   "version": "0.1.0",
   "keywords": [],
   "author": "Mate Academy",
@@ -60,7 +60,7 @@
     "update": "mate-scripts update",
     "postinstall": "npm run update && cypress verify",
     "predeploy": "npm run build",
-    "deploy": "mate-scripts deploy",
+    "deploy": "mate-scripts deploy"
 
   },
   "browserslist": {
