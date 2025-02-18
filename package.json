@@ -58,9 +58,10 @@
     "format": "prettier --write './src/**/*.{ts,tsx}'",
     "lint": "npm run style-format && npm run format && npm run lint-js && npm run lint-css",
     "update": "mate-scripts update",
-    "postinstall": "npm run update && cypress verify",
+    "postinstall": "if [ \"$VERCEL\" != \"1\" ]; then npm run update && cypress verify; fi",
     "predeploy": "npm run build",
-    "deploy": "mate-scripts deploy"
+    "deploy": "mate-scripts deploy",
+
   },
   "browserslist": {
     "production": [
